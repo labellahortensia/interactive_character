@@ -15,6 +15,61 @@ function draw() {
   background(255);
   noFill();
   
+  // Movement of eyes up and down
+  if (mouseY < height/3 ) 
+    {
+      yEyes = 220
+    }
+ 
+  else if (mouseY < 2*height/3)
+  {
+      yEyes = 240;
+  }
+  else 
+  {
+     yEyes = 260; 
+  }
+ 
+  // Movement of left eye - left to right
+  if (mouseX < width/3)
+  {
+    xREyes = 355;
+  }
+  else if (mouseX < 2*width/3)
+  {
+    xREyes = 375;
+  }
+  else {
+    xREyes = 395;
+  }
+  
+  // Movement of right eye - left to right
+  if (mouseX < width/3)
+  { 
+    xLEyes = 105;
+  }
+  else if (mouseX < 2*width/3)
+  {
+    xLEyes = 125;
+  }
+  else
+  {
+    xLEyes = 145;
+  }
+
+  
+  // Mouth movement
+  if (mouseIsPressed == true){
+    yMouth = 0; //black mouth when clicked
+  } else {
+    yMouth = 255; //white mouth when not clicked
+  }
+  
+  if (mouseIsPressed == true){
+    sizeMouth = random (20,60); //random open mouth when clicked
+  } else { 
+    sizeMouth = 50; // mouth back to just white when not cicked
+  }
   
   //Head
   strokeWeight(4);
